@@ -12,7 +12,9 @@ function installUnzip(){
 }
 
 command -v java >/dev/null 2>&1 || installJava
-echo "[Github Action] BiliBili" >> message.txt
-java -jar ./BILIBILI-HELPER.jar $DEDEUSERID $SESSDATA $BILI_JCT $SCKEY >> message.txt
+mkdir message
+msg_path=${RANDOM}.txt
+echo "[Github Action] BiliBili"                                         >> message/$msg_path
+java -jar ./BILIBILI-HELPER.jar $DEDEUSERID $SESSDATA $BILI_JCT $SCKEY  >> message/$msg_path
 cat message.txt
 echo "执行完成"
