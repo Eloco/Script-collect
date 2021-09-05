@@ -12,6 +12,7 @@ function installUnzip(){
 }
 
 command -v java >/dev/null 2>&1 || installJava
-java -jar ./BILIBILI-HELPER.jar $SESSDATA $DEDEUSERID $BILI_JCT $SCKEY >> message.txt
+echo "$SESSDATA $DEDEUSERID $BILI_JCT $SCKEY"
+java -jar ./BILIBILI-HELPER.jar $SESSDATA $DEDEUSERID $BILI_JCT $SCKEY >> message.txt 2>&1
 cat message.txt
 echo "执行完成"
