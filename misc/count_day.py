@@ -23,4 +23,6 @@ if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
 if flag == 1 and month > 2:
     sum += 1
 
+surplus_day = days - sum
+
 print(f"今天是：{year}.{month}.{day}，是今年的第{sum}天，今年还剩{surplus_day}天")
