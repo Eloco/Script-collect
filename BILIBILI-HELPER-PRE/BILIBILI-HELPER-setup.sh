@@ -16,5 +16,5 @@ mkdir message
 msg_path=${RANDOM}.txt
 echo "[Github Action] BiliBili"                                         >> message/$msg_path
 java -jar ./BILIBILI-HELPER.jar $DEDEUSERID $SESSDATA $BILI_JCT $SCKEY  >> message/$msg_path
-cat message.txt
+cat message/$msg_path
 echo "执行完成"
