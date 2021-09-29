@@ -88,7 +88,7 @@ def crawlAttr(movie):
                     for item in ["id","pubdate","data-title","data-duration","data-region","movieTypes","data-director","data-actors","data-score","summary","url"]:
                         try:
                             info=movie[item].replace("\n","")
-                            msg+=f'[{item}]:\t{info}\n'
+                            msg+=f'[{item}]:\t\t{info}\n'
                         except:continue
                     print(msg)
                     f.write(msg)
