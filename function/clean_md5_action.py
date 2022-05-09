@@ -21,9 +21,8 @@ def walk_dir(path="./"):
     final = []
     for root, dirs, files in os.walk(path):
         for file in files:
-            if "." not in file:
-                file_path = os.path.join(root, file)
-                final.append([file_path, md5checksum(file_path), os.path.getmtime(file_path)])
+            file_path = os.path.join(root, file)
+            final.append([file_path, md5checksum(file_path), os.path.getmtime(file_path)])
     return(final)
 
 final = list(sorted(walk_dir(), key=lambda x: x[2], reverse=True))
